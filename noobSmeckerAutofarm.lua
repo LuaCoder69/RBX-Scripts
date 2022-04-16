@@ -32,7 +32,7 @@ local mt = getrawmetatable(game)
 local namecall = mt.__namecall
 setreadonly(mt,false)
 mt.__namecall = newcclosure(function(self,...) -- self ( the instance )  and args 
-    if getnamecallmethod() == 'FireServer' and tostring(self) == 'Load' then -- checking if we're firing a remote
+    if getnamecallmethod() == 'FireServer' and tostring(self) == 'Swapzone' then -- checking if we're firing a remote
         local args = {...}
 		notification("Detected going to new zone reloading script in 2 seconds.")
         wait(2)
